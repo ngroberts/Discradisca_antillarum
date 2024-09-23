@@ -1,0 +1,11 @@
+*.fasta
+*.gfa
+*.amb
+*.bwt
+*.pac
+*.sa
+*.bed
+*.bin
+*.bam
+*.ann
+*.fastq.gz
