@@ -1,8 +1,9 @@
-### HiC Scaffolding of the Discradisca antillarum genome using HapHiC:
+## HiC Scaffolding of the Discradisca antillarum genome using HapHiC:
 
-#### Assembly of the genome with HiC data:
+### Assembly of the genome with HiC data:
 
 From **sbatch-Hifisasm_highmem.sh**
+
 Using Hifiasm 0.19.7
 
 
@@ -29,10 +30,12 @@ cat Discradisca_HiC.asm.hic.hap1.p_ctg.fasta Discradisca_HiC.asm.hic.hap2.p_ctg.
 
 ```
 
-#### Align Hi-C reads to the genome:
+### Align Hi-C reads to the genome:
 
 From **sbatch-bwa_HapHic.sh**
+
 Using samtools1.10
+
 Using bwa0.7.17-r1188
 
 Here we are going to align all our reads to both haplotypes: Discradisca_HiC.asm.hic.all_haps.p_ctg.fasta
@@ -50,9 +53,10 @@ Here we are going to align all our reads to both haplotypes: Discradisca_HiC.asm
 
 ```
 
-#### Use quickview in HapHiC to estimate diploid chromosome number manually:
+### Use quickview in HapHiC to estimate diploid chromosome number manually:
 We need to do this because we do not know the number of chromosomes. Also notice how we specify the chemistry of retsrtcion sites. We used Arima 4.5
-We also specify nchrs to be 0 because for quickview it disregards this value
+
+We also specify nchrs to be 0 because for quickview it disregards this value.
 
 From **sbatch-HapHiC_quickview.sh**
 
@@ -68,10 +72,11 @@ nchrs=0
 
 ```
 
-#### Manually curate in juicer to get diploid chromosome number:
+### Manually curate in juicer to get diploid chromosome number:
+
 Haphic produces a file, juicebox.sh in 04.build, you can adde the appropriate headers and run this to get the files needed for juicer.
 
-The fileswe need for juicebox are:
+The files we need for juicebox are:
 
 > out_JBAT.hic
 > out_JBAT.assembly 
@@ -86,8 +91,7 @@ Do manual curation in juicer:
 
 We now have some idea of the diploid chromsosome number being ()
 
-#### Run HapHic with our diploid chromsosome number:
-
+### Run HapHic with our diploid chromsosome number:
 
 ```bash
-
+```

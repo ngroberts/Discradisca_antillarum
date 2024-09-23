@@ -1,0 +1,48 @@
+[bwa_index] Pack FASTA... 3.84 sec
+[bwa_index] Construct BWT for the packed sequence...
+[BWTIncCreate] textLength=1220542480, availableWord=97881876
+[BWTIncConstructFromPacked] 10 iterations done. 100000000 characters processed.
+[BWTIncConstructFromPacked] 20 iterations done. 200000000 characters processed.
+[BWTIncConstructFromPacked] 30 iterations done. 300000000 characters processed.
+[BWTIncConstructFromPacked] 40 iterations done. 400000000 characters processed.
+[BWTIncConstructFromPacked] 50 iterations done. 500000000 characters processed.
+[BWTIncConstructFromPacked] 60 iterations done. 598171168 characters processed.
+[BWTIncConstructFromPacked] 70 iterations done. 686427520 characters processed.
+[BWTIncConstructFromPacked] 80 iterations done. 764865968 characters processed.
+[BWTIncConstructFromPacked] 90 iterations done. 834578256 characters processed.
+[BWTIncConstructFromPacked] 100 iterations done. 896534688 characters processed.
+[BWTIncConstructFromPacked] 110 iterations done. 951597712 characters processed.
+[BWTIncConstructFromPacked] 120 iterations done. 1000533888 characters processed.
+[BWTIncConstructFromPacked] 130 iterations done. 1044024416 characters processed.
+[BWTIncConstructFromPacked] 140 iterations done. 1082674912 characters processed.
+[BWTIncConstructFromPacked] 150 iterations done. 1117023552 characters processed.
+[BWTIncConstructFromPacked] 160 iterations done. 1147548672 characters processed.
+[BWTIncConstructFromPacked] 170 iterations done. 1174675456 characters processed.
+[BWTIncConstructFromPacked] 180 iterations done. 1198781792 characters processed.
+[BWTIncConstructFromPacked] 190 iterations done. 1220203504 characters processed.
+[bwt_gen] Finished constructing BWT in 191 iterations.
+[bwa_index] 348.84 seconds elapse.
+[bwa_index] Update BWT... 2.37 sec
+[bwa_index] Pack forward-only FASTA... 2.28 sec
+[bwa_index] Construct SA from BWT and Occ... 166.78 sec
+[main] Version: 0.7.17-r1188
+[main] CMD: /kmk/scripts/bwa/bwa index Discradisca_HiC.asm.hic.all_haps.p_ctg.fasta
+[main] Real time: 528.948 sec; CPU: 524.102 sec
+samblaster: Version 0.1.26
+samblaster: Inputting from stdin
+samblaster: Outputting to stdout
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 1866668 sequences (280000200 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (3, 293, 4, 0)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (263, 365, 469)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 881)
+[M::mem_pestat] mean and std.dev: (354.79, 157.33)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1087)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 1866668 reads in 452.270 CPU sec, 34.040 real sec
+samblaster: Loaded 403 header sequence entries.
+[M::process] read 1866668 sequences (280000200 bp)...
+[M::process] read 1866668 sequences (280000200 bp)...
