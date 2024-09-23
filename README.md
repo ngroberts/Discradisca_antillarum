@@ -37,7 +37,7 @@ Using bwa0.7.17-r1188
 
 Here we are going to align all our reads to both haplotypes: Discradisca_HiC.asm.hic.all_haps.p_ctg.fasta
 
-```{bash}
+```bash
 
 ### Create a BWA index
 /kmk/scripts/bwa/bwa index Discradisca_HiC.asm.hic.all_haps.p_ctg.fasta
@@ -56,7 +56,7 @@ We also specify nchrs to be 0 because for quickview it disregards this value
 
 From **sbatch-HapHiC_quickview.sh**
 
-```{bash}
+```bash
 
 FILTEREDBAM=HiC.filtered.bam
 ASSEMBLY=Discradisca_HiC.asm.hic.all_haps.p_ctg.fasta
@@ -89,5 +89,5 @@ We now have some idea of the diploid chromsosome number being ()
 #### Run HapHic with our diploid chromsosome number:
 
 
-```{bash}
+```bash
 
