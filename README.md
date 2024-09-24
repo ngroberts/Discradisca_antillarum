@@ -101,22 +101,93 @@ The files we need for juicebox are:
 > out_JBAT.hic
 > out_JBAT.assembly 
 
-Take these into juicer, and look at the raw data.
-
-![]("pngs/discradisca_no_curation.png")
-
 Do manual curation in juicer:
 
-![]("pngs/discradisca_curated.png")
+![]("images/HiC_Haplotype_resolved_Image.pdf")
 
-We now have some idea of the diploid chromsosome number being ()
+We now have some idea of the diploid chromsosome number being 18.
 
 ### Run HapHic with our diploid chromsosome number:
 
+We can now remove the quickview flag and make sure to specify the gfas for each haplotype. Giving it our expected chromsosome number it will try and scaffold the data.
+
 ```bash
+FILTEREDBAM=HiC.filtered.bam
+ASSEMBLY=/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/Discradisca_HiC.asm.hic.all_haps.p_ctg.fasta
+nchrs=18
+
+/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/programs/HapHiC/haphic pipeline $ASSEMBLY $FILTEREDBAM $nchrs --threads 16 --gfa "/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/scaffolding_all_haps/Discradisca_HiC.asm.hic.hap1.p_ctg.gfa,/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/scaffolding_all_haps/Discradisca_HiC.asm.hic.hap2.p_ctg.gfa" --max_inflation 3 --correct_nrounds 2 --RE "GATC,GANTC,CTNAG,TTAA"
 ```
+
+Using the same steps above (running juicer.sh) we can take a look at the HiC map and do some manual scaffolding in Juicebox.
+
+Here is the final HiC map: N= 9, 2N = 18.
+
+![]("HiC_discradisca_full_haphic_2N_Image.pdf")
+
+Lastly we can use juicer post after saving this assembly in juicebox to produce the final fasta, and remove the debris generated in juicebox.
+
+From juicer_post.sh
+
+```bash
+/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/programs/HapHiC/scripts/../utils/juicer post -o out_JBAT out_JBAT.review.assembly out_JBAT.liftover.agp Discradisca_HiC.asm.hic.all_haps.p_ctg.fasta
+```
+
+This will produce:
+
+>out_JBAT.FINAL.fa
+
+Then we need to remove the debris using seqkit.
+
+/grps2/kmk/Nick/2024-02-27_MDA_Seqkit_Samtools/scripts/seqkit head -n 18 out_JBAT.FINAL.fa > Discradisca_antillarum_diploid.fa
+
+##Results
+
+### Haplotype Resolved Assembly [N=9, 2N=18]
+
+![]("HiC_discradisca_full_haphic_2N_Image.pdf")
+
+BUSCO:
+> ##### Results:
+> 
+> ```
+> C:95.6%[S:10.3%,D:85.3%],F:0.8%,M:3.6%,n:954
+> 912     Complete BUSCOs (C)
+> 98	    Complete and single-copy BUSCOs (S)
+> 814     Complete and duplicated BUSCOs (D)
+> 8	    Fragmented BUSCOs (F)
+> 34	    Missing BUSCOs (M)
+> 954     Total BUSCO groups searched
+> ```
+
+Quast:
+> Assembly                    Discradisca_antillarum_diploid
+> # contigs (>= 0 bp)         18
+> # contigs (>= 1000 bp)      18
+> # contigs (>= 5000 bp)      18
+> # contigs (>= 10000 bp)     18
+> # contigs (>= 25000 bp)     18
+> # contigs (>= 50000 bp)     18
+> Total length (>= 0 bp)      590625809
+> Total length (>= 1000 bp)   590625809
+> Total length (>= 5000 bp)   590625809
+> Total length (>= 10000 bp)  590625809
+> Total length (>= 25000 bp)  590625809
+> Total length (>= 50000 bp)  590625809
+> # contigs                   18
+> Largest contig              59648151
+> Total length                590625809
+> GC (%)                      35.42
+> N50                         36278936
+> N75                         24445255
+> L50                         6
+> L75                         12
+> # N's per 100 kbp           0.36
+
 ### Haplotype Graph Scaffolding
+
+Analysis still ongoing...
 
 ### Untig Graph Scaffolding
 
-
+Analysis still ongoing...
