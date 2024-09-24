@@ -53,7 +53,7 @@ Here we are going to align all our reads to both haplotypes: Discradisca_HiC.asm
 
 ```
 
-####**Issue:**
+#### **Issue:**
 
 For this genome when filtered, the bamfile is only 63M compared to the unfiltered 224M and 590M allhaps.fasta. This is not enough coverage of HiC for proper scaffolding according to HapHic.
 
