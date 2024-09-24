@@ -141,7 +141,7 @@ Then we need to remove the debris using seqkit.
 
 /grps2/kmk/Nick/2024-02-27_MDA_Seqkit_Samtools/scripts/seqkit head -n 18 out_JBAT.FINAL.fa > Discradisca_antillarum_diploid.fa
 
-##Results
+## Results
 
 ### Haplotype Resolved Assembly [N=9, 2N=18]
 
