@@ -20,11 +20,11 @@ module load miniconda3/base/py38_4.13.0
 conda activate /bighome/ngroberts/.conda/envs/haphic
 
 FILTEREDBAM=HiC.filtered.bam
-ASSEMBLY=Discradisca_HiC.asm.hic.all_haps.p_ctg.fasta
+ASSEMBLY=/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/Discradisca_HiC.asm.hic.all_haps.p_ctg.fasta
 nchrs=0
 
 ### Partition contigs into different haplotypes in quick view mode
 
-/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/programs/HapHiC/haphic pipeline $nchrs $ASSEMBLY $FILTEREDBAM --quick-view --gfa "Discradisca_HiC.asm.hic.hap1.p_ctg.gfa,Discradisca_HiC.asm.hic.hap2.p_ctg.gfa" --correct_nrounds 2 --RE "GATC,GANTC,CTNAG,TTAA"
+/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/programs/HapHiC/haphic pipeline $nchrs $ASSEMBLY $FILTEREDBAM --quick-view --gfa "/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/Discradisca_HiC.asm.hic.hap1.p_ctg.gfa,/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/Discradisca_HiC.asm.hic.hap2.p_ctg.gfa" --correct_nrounds 2 --RE "GATC,GANTC,CTNAG,TTAA"
 
 conda deactivate

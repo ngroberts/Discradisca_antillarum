@@ -1,0 +1,30 @@
+[bwa_index] Pack FASTA... 1.89 sec
+[bwa_index] Construct BWT for the packed sequence...
+[BWTIncCreate] textLength=623311478, availableWord=55858344
+[BWTIncConstructFromPacked] 10 iterations done. 88957334 characters processed.
+[BWTIncConstructFromPacked] 20 iterations done. 167398054 characters processed.
+[BWTIncConstructFromPacked] 30 iterations done. 237112374 characters processed.
+[BWTIncConstructFromPacked] 40 iterations done. 299070614 characters processed.
+[BWTIncConstructFromPacked] 50 iterations done. 354135254 characters processed.
+[BWTIncConstructFromPacked] 60 iterations done. 403072854 characters processed.
+[BWTIncConstructFromPacked] 70 iterations done. 446564662 characters processed.
+[BWTIncConstructFromPacked] 80 iterations done. 485216294 characters processed.
+[BWTIncConstructFromPacked] 90 iterations done. 519565926 characters processed.
+[BWTIncConstructFromPacked] 100 iterations done. 550091926 characters processed.
+[BWTIncConstructFromPacked] 110 iterations done. 577219510 characters processed.
+[BWTIncConstructFromPacked] 120 iterations done. 601326534 characters processed.
+[BWTIncConstructFromPacked] 130 iterations done. 622748870 characters processed.
+[bwt_gen] Finished constructing BWT in 131 iterations.
+[bwa_index] 167.90 seconds elapse.
+[bwa_index] Update BWT... 1.21 sec
+[bwa_index] Pack forward-only FASTA... 1.07 sec
+[bwa_index] Construct SA from BWT and Occ... 80.71 sec
+[main] Version: 0.7.17-r1188
+[main] CMD: /kmk/scripts/bwa/bwa index /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/Discradisca_HiC.asm.hic.hap1.p_ctg.fasta
+[main] Real time: 254.638 sec; CPU: 252.787 sec
+[bwa_index] Pack FASTA... 1.87 sec
+[bwa_index] Construct BWT for the packed sequence...
+[BWTIncCreate] textLength=597231002, availableWord=54023024
+[BWTIncConstructFromPacked] 10 iterations done. 86329930 characters processed.
+[BWTIncConstructFromPacked] 20 iterations done. 162160314 characters processed.
+[BWTIncConstructFromPacked] 30 iterations done. 229554554 characters processed.
