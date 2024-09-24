@@ -54,7 +54,7 @@ Here we are going to align all our reads to both haplotypes: Discradisca_HiC.asm
 ```
 
 ### Use quickview in HapHiC to estimate diploid chromosome number manually:
-We need to do this because we do not know the number of chromosomes. Also notice how we specify the chemistry of retsrtcion sites. We used Arima 4.5
+We need to do this because we do not know the number of chromosomes. Also notice how we specify the chemistry of restriction sites. We used Arima 4.5
 
 We also specify nchrs to be 0 because for quickview it disregards this value.
 
