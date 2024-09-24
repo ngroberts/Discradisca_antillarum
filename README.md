@@ -94,7 +94,7 @@ nchrs=0
 
 ### Manually curate in juicer to get diploid chromosome number:
 
-Haphic produces a file, juicebox.sh in 04.build, you can adde the appropriate headers and run this to get the files needed for juicer.
+Haphic produces a file, juicebox.sh in 04.build, you can add the appropriate headers and run this to get the files needed for juicer.
 
 The files we need for juicebox are:
 
