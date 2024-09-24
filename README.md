@@ -65,11 +65,11 @@ I now attempted to solve this in two ways:
 
 1. I attempted to scaffold each haplotype separetely, this is done by aligning HiC reads to each haplotype and scaffolding.
 
-[Scaffolding Haplotypes Seperately](###haplotype-graph-scaffolding)
+[Scaffolding Haplotypes Seperately](#haplotype-graph-scaffolding)
 
 2. I attempted to just scaffold the haplotype collapsed unitg graph from Hifiasm. *.p_utg.fasta. This is done by aligning HiC reads to this and proceeding.
 
-[Scaffolding untig Graph](###untig-graph-scaffolding)
+[Scaffolding untig Graph](#untig-graph-scaffolding)
 
 The following steps proceed without solving this issue, but the steps are the same to produce the results. Please see the sections mentioned above to see these results.
 
