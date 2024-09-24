@@ -9,3 +9,16 @@
 *.bam
 *.ann
 *.fastq.gz
+*.fa
+
+run_metazoa_odb10/
+blast_db/
+logs/
+tmp_opt_BUSCO_*/
+tmp_opt_BUSCO_BUSCO_metazoa.fasta/
+busco_downloads/
+01.cluster/
+02.reassign/
+03.sort/
+04.build/
+
