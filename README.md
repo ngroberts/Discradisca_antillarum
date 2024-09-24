@@ -161,6 +161,7 @@ BUSCO:
 > ```
 
 Quast:
+> ```
 > Assembly                    Discradisca_antillarum_diploid
 > # contigs (>= 0 bp)         18
 > # contigs (>= 1000 bp)      18
@@ -183,6 +184,7 @@ Quast:
 > L50                         6
 > L75                         12
 > # N's per 100 kbp           0.36
+> ```
 
 ### Haplotype Graph Scaffolding
 
