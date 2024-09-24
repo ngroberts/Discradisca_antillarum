@@ -103,7 +103,7 @@ The files we need for juicebox are:
 
 Do manual curation in juicer:
 
-![]("images/Hic_haplotype_resolved_quickview.png")
+![](https://github.com/ngroberts/Discradisca_HiC/blob/master/images/Hic_haplotype_resolved_quickview.png)
 
 We now have some idea of the diploid chromsosome number being 18.
 
@@ -123,7 +123,7 @@ Using the same steps above (running juicer.sh) we can take a look at the HiC map
 
 Here is the final HiC map: N= 9, 2N = 18.
 
-![]("images/HIC_Discradisca_diploid.png")
+![](https://github.com/ngroberts/Discradisca_HiC/blob/master/images/HIC_Discradisca_diploid.png)
 
 Lastly we can use juicer post after saving this assembly in juicebox to produce the final fasta, and remove the debris generated in juicebox.
 
@@ -145,7 +145,7 @@ Then we need to remove the debris using seqkit.
 
 ### Haplotype Resolved Assembly [N=9, 2N=18]
 
-![]("/images/HiC_discradisca_full_haphic_2N_Image.pdf")
+![](https://github.com/ngroberts/Discradisca_HiC/blob/master/images/HIC_Discradisca_diploid.png)
 
 BUSCO:
 > ##### Results:
