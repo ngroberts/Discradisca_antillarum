@@ -1,0 +1,44 @@
+Loading bio/busco
+  Loading requirement: mpi/openmpi/gcc/1.10.2 compilers/gcc/4.8.4 bio/allpathslg
+    perl/5.22.1threaded bio/bioinfo-gcc gsl/1.15 bio/samtools/1.10 boost/1.66.0
+    bio/augustus/3.3.2 bio/blast/2.9.0 physical/GDAL2/2.4.0
+    python/python3/3.6.5shared java/1.8.0 bio/upp
+INFO:	***** Start a BUSCO v4.0.2 analysis, current time: 09/25/2024 11:38:24 *****
+INFO:	Configuring BUSCO with /kmk/scripts/busco/config.ini
+INFO:	Mode is genome
+INFO:	Input file is Discradisca_antillarum_haplotype1.fa
+INFO:	Using local lineages directory /kmk/databases/metazoa_odb10
+INFO:	Running BUSCO using lineage dataset metazoa_odb10 (eukaryota, 2019-11-20)
+INFO:	Creating BLAST database with input file
+INFO:	Running 1 job(s) on makeblastdb
+INFO:	[makeblastdb]	1 of 1 task(s) completed
+INFO:	Running a BLAST search for BUSCOs against created database
+INFO:	Running 1 job(s) on tblastn
+INFO:	[tblastn]	1 of 1 task(s) completed
+INFO:	Running Augustus gene predictor on BLAST search results.
+INFO:	Running Augustus prediction using fly as species:
+INFO:	Running 953 job(s) on augustus
+INFO:	[augustus]	96 of 953 task(s) completed
+INFO:	[augustus]	191 of 953 task(s) completed
+INFO:	[augustus]	286 of 953 task(s) completed
+INFO:	[augustus]	382 of 953 task(s) completed
+INFO:	[augustus]	477 of 953 task(s) completed
+INFO:	[augustus]	572 of 953 task(s) completed
+INFO:	[augustus]	668 of 953 task(s) completed
+INFO:	[augustus]	763 of 953 task(s) completed
+INFO:	[augustus]	858 of 953 task(s) completed
+INFO:	[augustus]	953 of 953 task(s) completed
+INFO:	Extracting predicted proteins...
+INFO:	***** Run HMMER on gene sequences *****
+INFO:	Running 917 job(s) on hmmsearch
+INFO:	[hmmsearch]	92 of 917 task(s) completed
+INFO:	[hmmsearch]	184 of 917 task(s) completed
+INFO:	[hmmsearch]	276 of 917 task(s) completed
+INFO:	[hmmsearch]	367 of 917 task(s) completed
+INFO:	[hmmsearch]	551 of 917 task(s) completed
+INFO:	[hmmsearch]	642 of 917 task(s) completed
+INFO:	[hmmsearch]	734 of 917 task(s) completed
+INFO:	[hmmsearch]	826 of 917 task(s) completed
+INFO:	[hmmsearch]	917 of 917 task(s) completed
+INFO:	Running a BLAST search for BUSCOs against created database
+INFO:	Extracting missing and fragmented buscos from the file ancestral_variants...

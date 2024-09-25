@@ -195,18 +195,84 @@ This result of having a too low inflation initially is just due to the HiC libra
 
 #### Haplotype 1
 
+Recommended inflation ended up being 11.2. (Warning: This is high, indicating poor HiC interactions)
+
 HiC Graph:
 
 Metrics:
 
+Quast: 
+> ```
+> Assembly                    Discradisca_antillarum_haplotype1
+> # contigs (>= 0 bp)         9                                
+> # contigs (>= 1000 bp)      9                                
+> # contigs (>= 5000 bp)      9                                
+> # contigs (>= 10000 bp)     9                                
+> # contigs (>= 25000 bp)     9                                
+> # contigs (>= 50000 bp)     9                                
+> Total length (>= 0 bp)      296469411                        
+> Total length (>= 1000 bp)   296469411                        
+> Total length (>= 5000 bp)   296469411                        
+> Total length (>= 10000 bp)  296469411                        
+> Total length (>= 25000 bp)  296469411                        
+> Total length (>= 50000 bp)  296469411                        
+> # contigs                   9                                
+> Largest contig              56942312                         
+> Total length                296469411                        
+> GC (%)                      35.43                            
+> N50                         34526636                         
+> N75                         26076530                         
+> L50                         4                                
+> L75                         6                                
+> # N's per 100 kbp           0.44 
+> ```
+
+Busco:
+
+
 #### Haplotype 2
 
-HiC Graph:
+Recommended inflation ended up being >40. (Warning: This is way too high, indicating poor HiC interactions)
 
-Matrics:
+Scaffolding was not able to be performed.
 
 ### Untig Graph Scaffolding
 
 Because we have such low coverage of HiC reads the inflation paramter even with a known number of chromsosomes is too low.
 
 This result of having a too low inflation initially is just due to the HiC library quality not being very high. Inflation was increased investigating the logs until 7 was the recommended parameter.
+
+HiC Graph:
+
+Metrics:
+
+Quast:
+
+> ```
+> Assembly                    Discradisca_antillarum_phased
+> # contigs (>= 0 bp)         9                            
+> # contigs (>= 1000 bp)      9                            
+> # contigs (>= 5000 bp)      9                            
+> # contigs (>= 10000 bp)     9                            
+> # contigs (>= 25000 bp)     9                            
+> # contigs (>= 50000 bp)     9                            
+> Total length (>= 0 bp)      567920170                    
+> Total length (>= 1000 bp)   567920170                    
+> Total length (>= 5000 bp)   567920170                    
+> Total length (>= 10000 bp)  567920170                    
+> Total length (>= 25000 bp)  567920170                    
+> Total length (>= 50000 bp)  567920170                    
+> # contigs                   9                            
+> Largest contig              158132778                    
+> Total length                567920170                    
+> GC (%)                      35.40                        
+> N50                         58590272                     
+> N75                         50405973                     
+> L50                         3                            
+> L75                         6                            
+> # N's per 100 kbp           2.10
+> ```
+
+Busco:
+
+
