@@ -53,7 +53,7 @@ Here we are going to align all our reads to both haplotypes: Discradisca_HiC.asm
 
 ```
 
-####**Issue:**
+#### **Issue:**
 
 For this genome when filtered, the bamfile is only 63M compared to the unfiltered 224M and 590M allhaps.fasta. This is not enough coverage of HiC for proper scaffolding according to HapHic.
 
@@ -94,7 +94,7 @@ nchrs=0
 
 ### Manually curate in juicer to get diploid chromosome number:
 
-Haphic produces a file, juicebox.sh in 04.build, you can adde the appropriate headers and run this to get the files needed for juicer.
+Haphic produces a file, juicebox.sh in 04.build, you can add the appropriate headers and run this to get the files needed for juicer.
 
 The files we need for juicebox are:
 
@@ -139,8 +139,9 @@ This will produce:
 
 Then we need to remove the debris using seqkit.
 
+```bash
 /grps2/kmk/Nick/2024-02-27_MDA_Seqkit_Samtools/scripts/seqkit head -n 18 out_JBAT.FINAL.fa > Discradisca_antillarum_diploid.fa
-
+```
 ## Results
 
 ### Haplotype Resolved Assembly [N=9, 2N=18]
