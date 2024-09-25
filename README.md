@@ -188,8 +188,24 @@ Quast:
 
 ### Haplotype Graph Scaffolding
 
-Analysis still ongoing...
+Because we have such low coverage of HiC reads the inflation paramter even with a known number of chromsosomes is too low. 
+
+This result of having a too low inflation initially is just due to the HiC library quality not being very high. Inflation was increased to 7 and re-run which allowed for scaffolding.
+
+#### Haplotype 1
+
+HiC Graph:
+
+Metrics:
+
+#### Haplotype 2
+
+HiC Graph:
+
+Matrics:
 
 ### Untig Graph Scaffolding
 
-Analysis still ongoing...
+Because we have such low coverage of HiC reads the inflation paramter even with a known number of chromsosomes is too low.
+
+This result of having a too low inflation initially is just due to the HiC library quality not being very high. Inflation was increased investigating the logs until 7 was the recommended parameter.

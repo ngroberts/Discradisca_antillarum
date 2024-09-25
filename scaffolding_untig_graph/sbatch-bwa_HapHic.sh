@@ -23,10 +23,10 @@ module load miniconda3/base/py38_4.13.0
 conda activate /bighome/ngroberts/.conda/envs/haphic
 
 ### Create a BWA index
-/kmk/scripts/bwa/bwa index /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/Discradisca_HiC.asm.hic.p_utg.fasta 
+#/kmk/scripts/bwa/bwa index /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/Discradisca_HiC.asm.hic.p_utg.fasta 
 
 ### Align HiC reads to all_haps.fasta
-/kmk/scripts/bwa/bwa mem -5SP -t 28 /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/Discradisca_HiC.asm.hic.p_utg.fasta /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/KK3956-2C_R_1.fastq.gz /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/KK3956-2C_R_2.fastq.gz | /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/programs/samblaster/samblaster | samtools view - -@ 14 -S -h -b -F 3340 -o HiC_unitg.bam
+#/kmk/scripts/bwa/bwa mem -5SP -t 28 /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/Discradisca_HiC.asm.hic.p_utg.fasta /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/KK3956-2C_R_1.fastq.gz /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/KK3956-2C_R_2.fastq.gz | /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/programs/samblaster/samblaster | samtools view - -@ 14 -S -h -b -F 3340 -o HiC_unitg.bam
 
 ### Filter: MAPQ>1 Max edit distance 3 (these are what HapHiC recommends)
 /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/programs/HapHiC/utils/filter_bam HiC_untig.bam 1 --nm 3 --threads 16 | samtools view - -b -@ 14 -o HiC_untig.filtered.bam
