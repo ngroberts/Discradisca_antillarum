@@ -232,13 +232,13 @@ Quast:
 Busco:
 
 > ```
-> 	C:95.2%[S:95.0%,D:0.2%],F:0.8%,M:4.0%,n:954	   
-> 	908	Complete BUSCOs (C)			   
-> 	906	Complete and single-copy BUSCOs (S)	   
-> 	2	Complete and duplicated BUSCOs (D)	   
-> 	8	Fragmented BUSCOs (F)			   
-> 	38	Missing BUSCOs (M)			   
-> 	954	Total BUSCO groups searched
+> C:95.2%[S:95.0%,D:0.2%],F:0.8%,M:4.0%,n:954	   
+> 908	Complete BUSCOs (C)			   
+> 906	Complete and single-copy BUSCOs (S)	   
+> 2	Complete and duplicated BUSCOs (D)	   
+> 8	Fragmented BUSCOs (F)			   
+> 38	Missing BUSCOs (M)			   
+> 954	Total BUSCO groups searched
 > ```
 
 
@@ -289,5 +289,12 @@ Quast:
 > ```
 
 Busco:
-
-
+> ```
+> C:95.8%[S:40.9%,D:54.9%],F:0.5%,M:3.7%,n:954	   
+> 914	Complete BUSCOs (C)			   
+> 390	Complete and single-copy BUSCOs (S)	   
+> 524	Complete and duplicated BUSCOs (D)	   
+> 5	Fragmented BUSCOs (F)			   
+> 35	Missing BUSCOs (M)			   
+> 954	Total BUSCO groups searched
+> ```
