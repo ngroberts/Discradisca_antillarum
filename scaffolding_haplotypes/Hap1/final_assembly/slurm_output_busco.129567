@@ -42,3 +42,7 @@ INFO:	[hmmsearch]	826 of 917 task(s) completed
 INFO:	[hmmsearch]	917 of 917 task(s) completed
 INFO:	Running a BLAST search for BUSCOs against created database
 INFO:	Extracting missing and fragmented buscos from the file ancestral_variants...
+INFO:	[tblastn]	1 of 1 task(s) completed
+INFO:	Training Augustus using Single-Copy Complete BUSCOs:
+INFO:	Converting predicted genes to short genbank files
+INFO:	Running 819 job(s) on gff2gbSmallDNA.pl

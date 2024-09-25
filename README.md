@@ -189,7 +189,7 @@ Quast:
 
 ### Haplotype Graph Scaffolding
 
-Because we have such low coverage of HiC reads the inflation paramter even with a known number of chromsosomes is too low. 
+Because we have such low coverage of HiC reads the inflation parameter even with a known number of chromsosomes is too low. 
 
 This result of having a too low inflation initially is just due to the HiC library quality not being very high. Inflation was increased to 7 and re-run which allowed for scaffolding.
 
@@ -198,6 +198,8 @@ This result of having a too low inflation initially is just due to the HiC libra
 Recommended inflation ended up being 11.2. (Warning: This is high, indicating poor HiC interactions)
 
 HiC Graph:
+
+![](https://github.com/ngroberts/Discradisca_HiC/blob/master/images/hap1_hic.png)
 
 Metrics:
 
@@ -238,12 +240,15 @@ Scaffolding was not able to be performed.
 
 ### Untig Graph Scaffolding
 
-Because we have such low coverage of HiC reads the inflation paramter even with a known number of chromsosomes is too low.
+Because we have such low coverage of HiC reads the inflation parameter even with a known number of chromsosomes is too low.
 
-This result of having a too low inflation initially is just due to the HiC library quality not being very high. Inflation was increased investigating the logs until 7 was the recommended parameter.
+This result of having a too low inflation initially is just due to the HiC library quality not being very high. 
+
+Inflation was increased investigating the logs until 7 was the recommended parameter.
 
 HiC Graph:
 
+![](https://github.com/ngroberts/Discradisca_HiC/blob/master/images/untig_hic.png)
 Metrics:
 
 Quast:
