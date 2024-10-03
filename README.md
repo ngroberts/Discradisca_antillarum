@@ -61,7 +61,7 @@ This results in Hi-C depth of only 0.1x. This is not enough for scaffolding.
 
 See: [HapHiC Issue #47](https://github.com/zengxiaofei/HapHiC/issues/47)
 
-I now attempted to solve this in two ways: 
+In order to produce the best possible assembly, I scaffolded 4 seperate assemblies: 
 
 1. I attempted to scaffold each haplotype separetely, this is done by aligning HiC reads to each haplotype and scaffolding.
 
@@ -72,6 +72,10 @@ I now attempted to solve this in two ways:
 [Scaffolding untig Graph](#untig-graph-scaffolding)
 
 The following steps proceed without solving this issue, but the steps are the same to produce the results. Please see the sections mentioned above to see these results.
+
+3. I attempted to just scaddfold the haplotype collapsed phased assembly, unlike the utg (untig graph) haplotype information is not retained, this should be the best one, but due to low coverage and contact info it may not end up being perfect.
+
+[Scaffolding phased graph](#haplotype-resolved-collapsed-graph-scaffolding)
 
 ### Use quickview in HapHiC to estimate diploid chromosome number manually:
 We need to do this because we do not know the number of chromosomes. Also notice how we specify the chemistry of restriction sites. We used Arima 4.5
@@ -297,4 +301,43 @@ Busco:
 > 5	Fragmented BUSCOs (F)			   
 > 35	Missing BUSCOs (M)			   
 > 954	Total BUSCO groups searched
+> ```
+
+### Haplotype Resolved Collapsed Graph Scaffolding
+
+Because we have such low coverage of HiC reads the inflation parameter even with a known number of chromsosomes is too low.
+
+This result of having a too low inflation initially is just due to the HiC library quality not being very high.
+
+Inflation was increased investigating the logs until 15.6 was the recommended parameter.
+
+
+HiC Graph:
+
+!()[https://github.com/ngroberts/Discradisca_HiC/blob/master/images/p_ctg_hic.png)
+
+Quast:
+> ```
+> Assembly	Discradisca_antillarum_collapsed_phased
+> # contigs (>= 0 bp)	9
+> # contigs (>= 1000 bp)	9
+> # contigs (>= 5000 bp)	9
+> # contigs (>= 10000 bp)	9
+> # contigs (>= 25000 bp)	9
+> # contigs (>= 50000 bp)	9
+> Total length (>= 0 bp)	297482005
+> Total length (>= 1000 bp)	297482005
+> Total length (>= 5000 bp)	297482005
+> Total length (>= 10000 bp)	297482005
+> Total length (>= 25000 bp)	297482005
+> Total length (>= 50000 bp)	297482005
+> # contigs	9
+> Largest contig	57892280
+> Total length	297482005
+> GC (%)	35.43
+> N50	33940083
+> N75	26378192
+> L50	4
+> L75	6
+> # N's per 100 kbp	0.00
 > ```
