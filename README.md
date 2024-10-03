@@ -341,3 +341,17 @@ Quast:
 > L75	6
 > # N's per 100 kbp	0.00
 > ```
+
+
+Busco:
+> ```
+> ***** Results: *****
+> 
+> C:95.6%[S:95.2%,D:0.4%],F:1.0%,M:3.4%,n:954	   
+> 912	Complete BUSCOs (C)			   
+> 908	Complete and single-copy BUSCOs (S)	   
+> 4	Complete and duplicated BUSCOs (D)	   
+> 10	Fragmented BUSCOs (F)			   
+> 32	Missing BUSCOs (M)			   
+> 954	Total BUSCO groups searched
+> ```
