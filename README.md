@@ -314,7 +314,7 @@ Inflation was increased investigating the logs until 15.6 was the recommended pa
 
 HiC Graph:
 
-![][https://github.com/ngroberts/Discradisca_HiC/blob/master/images/p_ctg_hic.png)
+![](https://github.com/ngroberts/Discradisca_HiC/blob/master/images/p_ctg_hic.png)
 
 Quast:
 > ```
