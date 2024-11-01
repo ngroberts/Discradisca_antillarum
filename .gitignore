@@ -10,6 +10,13 @@
 *.ann
 *.fastq.gz
 *.fa
+*.faa
+*.pep
+*.gff3
+*.gtf
+*.aa
+*.codingseq
+*.gff
 
 run_metazoa_odb10/
 blast_db/
@@ -21,4 +28,6 @@ busco_downloads/
 02.reassign/
 03.sort/
 04.build/
-
+GeneMark-ETP/
+errors/
+Augustus/
