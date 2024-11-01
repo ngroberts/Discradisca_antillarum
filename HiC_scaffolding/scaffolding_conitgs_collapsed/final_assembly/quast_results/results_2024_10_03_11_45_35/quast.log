@@ -1,0 +1,51 @@
+/share/apps/quast/quast-5.0.0/quast.py -e -m 0 -t 16 --space-efficient Discradisca_antillarum_collapsed_phased.fa
+
+Version: 5.0.0, de6973bb
+
+System information:
+  OS: Linux-4.18.0-372.9.1.el8.x86_64-x86_64-with-centos-8.6-Green_Obsidian (linux_64)
+  Python version: 3.3.2
+  CPUs number: 48
+
+Started: 2024-10-03 11:45:36
+
+Logging to /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/scaffolding_conitgs_collapsed/final_assembly/quast_results/results_2024_10_03_11_45_35/quast.log
+
+CWD: /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/scaffolding_conitgs_collapsed/final_assembly
+Main parameters: 
+  MODE: default, threads: 16, eukaryotic: true, minimum alignment length: 65, ambiguity: one, \
+  threshold for extensive misassembly size: 1000
+
+WARNING: Can't draw plots: python-matplotlib is missing or corrupted.
+
+Contigs:
+  Pre-processing...
+  Discradisca_antillarum_collapsed_phased.fa ==> Discradisca_antillarum_collapsed_phased
+
+2024-10-03 11:45:57
+Running Basic statistics processor...
+  Contig files: 
+    Discradisca_antillarum_collapsed_phased
+  Calculating N50 and L50...
+    Discradisca_antillarum_collapsed_phased, N50 = 33940083, L50 = 4, Total length = 297482005, GC % = 35.43, # N's per 100 kbp =  0.00
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2024-10-03 11:46:14
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+Done
+
+2024-10-03 11:46:14
+RESULTS:
+  Text versions of total report are saved to /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/scaffolding_conitgs_collapsed/final_assembly/quast_results/results_2024_10_03_11_45_35/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/scaffolding_conitgs_collapsed/final_assembly/quast_results/results_2024_10_03_11_45_35/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/scaffolding_conitgs_collapsed/final_assembly/quast_results/results_2024_10_03_11_45_35/report.html
+  Log is saved to /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/scaffolding_conitgs_collapsed/final_assembly/quast_results/results_2024_10_03_11_45_35/quast.log
+
+Finished: 2024-10-03 11:46:15
+Elapsed time: 0:00:39.042763
+NOTICEs: 1; WARNINGs: 1; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
