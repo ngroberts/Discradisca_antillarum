@@ -107,7 +107,7 @@ The files we need for juicebox are:
 
 Do manual curation in juicer:
 
-![](https://github.com/ngroberts/Discradisca_HiC/blob/master/images/Hic_haplotype_resolved_quickview.png)
+![](https://github.com/ngroberts/Discradisca_antillarum/blob/master/HiC_scaffolding/images/Hic_haplotype_resolved_quickview.png)
 
 We now have some idea of the diploid chromsosome number being 18.
 
@@ -150,7 +150,7 @@ Then we need to remove the debris using seqkit.
 
 ### Haplotype Resolved Assembly [N=9, 2N=18]
 
-![](https://github.com/ngroberts/Discradisca_HiC/blob/master/images/HIC_Discradisca_diploid.png)
+![](https://github.com/ngroberts/Discradisca_antillarum/blob/master/HiC_scaffolding/images/HIC_Discradisca_diploid.png)
 
 BUSCO:
 > ##### Results:
@@ -203,7 +203,7 @@ Recommended inflation ended up being 11.2. (Warning: This is high, indicating po
 
 HiC Graph:
 
-![](https://github.com/ngroberts/Discradisca_HiC/blob/master/images/hap1_hic.png)
+![](https://github.com/ngroberts/Discradisca_antillarum/blob/master/HiC_scaffolding/images/hap1_hic.png)
 
 Metrics:
 
@@ -262,7 +262,7 @@ Inflation was increased investigating the logs until 7 was the recommended param
 
 HiC Graph:
 
-![](https://github.com/ngroberts/Discradisca_HiC/blob/master/images/untig_hic.png)
+![](https://github.com/ngroberts/Discradisca_antillarum/blob/master/HiC_scaffolding/images/untig_hic.png)
 Metrics:
 
 Quast:
@@ -314,7 +314,7 @@ Inflation was increased investigating the logs until 15.6 was the recommended pa
 
 HiC Graph:
 
-![](https://github.com/ngroberts/Discradisca_HiC/blob/master/images/p_ctg_hic.png)
+![](https://github.com/ngroberts/Discradisca_antillarum/blob/master/HiC_scaffolding/images/p_ctg_hic.png)
 
 Quast:
 > ```
