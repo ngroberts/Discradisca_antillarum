@@ -1,0 +1,9 @@
+chr - scaffold1 1 0 57892280 black
+chr - scaffold2 2 0 48816638 black
+chr - scaffold3 3 0 36932098 black
+chr - scaffold4 4 0 33940083 black
+chr - scaffold5 5 0 24869671 black
+chr - scaffold6 6 0 26404781 black
+chr - scaffold7 7 0 26378192 black
+chr - scaffold8 8 0 21322506 black
+chr - scaffold9 9 0 20925756 black
