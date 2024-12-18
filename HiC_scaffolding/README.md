@@ -99,7 +99,7 @@ nchrs=0
 
 ### Manually curate in juicer to get diploid chromosome number:
 
-Haphic produces a file, juicebox.sh in 04.build, you can add the appropriate headers and run this to get the files needed for juicer.
+Haphic produces a file, juicebox.sh in 04.build, you can add the appropriate parameters (sbatch headers) and run this to get the files needed for juicer.
 
 The files we need for juicebox are:
 
@@ -108,7 +108,7 @@ The files we need for juicebox are:
 
 Do manual curation in juicer:
 
-![](https://github.com/ngroberts/Discradisca_antillarum/blob/master/HiC_scaffolding/images/Hic_haplotype_resolved_quickview.png)
+![]()
 
 We now have some idea of the diploid chromsosome number being 18.
 
@@ -149,210 +149,50 @@ Then we need to remove the debris using seqkit.
 ```
 ## Results
 
-### Haplotype Resolved Assembly [N=9, 2N=18]
+### Haplotype Resolved Assembly 
 
-![](https://github.com/ngroberts/Discradisca_antillarum/blob/master/HiC_scaffolding/images/HIC_Discradisca_diploid.png)
+[N=9, 2N=18]
+
+![]()
 
 BUSCO:
-> ##### Results:
-> 
-> ```
-> C:95.6%[S:10.3%,D:85.3%],F:0.8%,M:3.6%,n:954
-> 912     Complete BUSCOs (C)
-> 98	    Complete and single-copy BUSCOs (S)
-> 814     Complete and duplicated BUSCOs (D)
-> 8	    Fragmented BUSCOs (F)
-> 34	    Missing BUSCOs (M)
-> 954     Total BUSCO groups searched
-> ```
 
 Quast:
-> ```
-> Assembly                    Discradisca_antillarum_diploid
-> # contigs (>= 0 bp)         18
-> # contigs (>= 1000 bp)      18
-> # contigs (>= 5000 bp)      18
-> # contigs (>= 10000 bp)     18
-> # contigs (>= 25000 bp)     18
-> # contigs (>= 50000 bp)     18
-> Total length (>= 0 bp)      590625809
-> Total length (>= 1000 bp)   590625809
-> Total length (>= 5000 bp)   590625809
-> Total length (>= 10000 bp)  590625809
-> Total length (>= 25000 bp)  590625809
-> Total length (>= 50000 bp)  590625809
-> # contigs                   18
-> Largest contig              59648151
-> Total length                590625809
-> GC (%)                      35.42
-> N50                         36278936
-> N75                         24445255
-> L50                         6
-> L75                         12
-> # N's per 100 kbp           0.36
-> ```
+
 
 ### Haplotype Graph Scaffolding
 
-Because we have such low coverage of HiC reads the inflation parameter even with a known number of chromsosomes is too low. 
-
-This result of having a too low inflation initially is just due to the HiC library quality not being very high. Inflation was increased to 7 and re-run which allowed for scaffolding.
-
 #### Haplotype 1
-
-Recommended inflation ended up being 11.2. (Warning: This is high, indicating poor HiC interactions)
 
 HiC Graph:
 
-![](https://github.com/ngroberts/Discradisca_antillarum/blob/master/HiC_scaffolding/images/hap1_hic.png)
+![]()
 
 Metrics:
 
 Quast: 
-> ```
-> Assembly                    Discradisca_antillarum_haplotype1
-> # contigs (>= 0 bp)         9                                
-> # contigs (>= 1000 bp)      9                                
-> # contigs (>= 5000 bp)      9                                
-> # contigs (>= 10000 bp)     9                                
-> # contigs (>= 25000 bp)     9                                
-> # contigs (>= 50000 bp)     9                                
-> Total length (>= 0 bp)      296469411                        
-> Total length (>= 1000 bp)   296469411                        
-> Total length (>= 5000 bp)   296469411                        
-> Total length (>= 10000 bp)  296469411                        
-> Total length (>= 25000 bp)  296469411                        
-> Total length (>= 50000 bp)  296469411                        
-> # contigs                   9                                
-> Largest contig              56942312                         
-> Total length                296469411                        
-> GC (%)                      35.43                            
-> N50                         34526636                         
-> N75                         26076530                         
-> L50                         4                                
-> L75                         6                                
-> # N's per 100 kbp           0.44 
-> ```
 
 Busco:
-
-> ```
-> C:95.2%[S:95.0%,D:0.2%],F:0.8%,M:4.0%,n:954	   
-> 908	Complete BUSCOs (C)			   
-> 906	Complete and single-copy BUSCOs (S)	   
-> 2	Complete and duplicated BUSCOs (D)	   
-> 8	Fragmented BUSCOs (F)			   
-> 38	Missing BUSCOs (M)			   
-> 954	Total BUSCO groups searched
-> ```
 
 
 #### Haplotype 2
 
-Recommended inflation ended up being >40. (Warning: This is way too high, indicating poor HiC interactions)
+![]()
 
-Scaffolding was not able to be performed.
-
-### Untig Graph Scaffolding
-
-Because we have such low coverage of HiC reads the inflation parameter even with a known number of chromsosomes is too low.
-
-This result of having a too low inflation initially is just due to the HiC library quality not being very high. 
-
-Inflation was increased investigating the logs until 7 was the recommended parameter.
-
-HiC Graph:
-
-![](https://github.com/ngroberts/Discradisca_antillarum/blob/master/HiC_scaffolding/images/untig_hic.png)
 Metrics:
 
-Quast:
-
-> ```
-> Assembly                    Discradisca_antillarum_phased
-> # contigs (>= 0 bp)         9                            
-> # contigs (>= 1000 bp)      9                            
-> # contigs (>= 5000 bp)      9                            
-> # contigs (>= 10000 bp)     9                            
-> # contigs (>= 25000 bp)     9                            
-> # contigs (>= 50000 bp)     9                            
-> Total length (>= 0 bp)      567920170                    
-> Total length (>= 1000 bp)   567920170                    
-> Total length (>= 5000 bp)   567920170                    
-> Total length (>= 10000 bp)  567920170                    
-> Total length (>= 25000 bp)  567920170                    
-> Total length (>= 50000 bp)  567920170                    
-> # contigs                   9                            
-> Largest contig              158132778                    
-> Total length                567920170                    
-> GC (%)                      35.40                        
-> N50                         58590272                     
-> N75                         50405973                     
-> L50                         3                            
-> L75                         6                            
-> # N's per 100 kbp           2.10
-> ```
+Quast: 
 
 Busco:
-> ```
-> C:95.8%[S:40.9%,D:54.9%],F:0.5%,M:3.7%,n:954	   
-> 914	Complete BUSCOs (C)			   
-> 390	Complete and single-copy BUSCOs (S)	   
-> 524	Complete and duplicated BUSCOs (D)	   
-> 5	Fragmented BUSCOs (F)			   
-> 35	Missing BUSCOs (M)			   
-> 954	Total BUSCO groups searched
-> ```
 
-### Haplotype Resolved Collapsed Graph Scaffolding
 
-Because we have such low coverage of HiC reads the inflation parameter even with a known number of chromsosomes is too low.
-
-This result of having a too low inflation initially is just due to the HiC library quality not being very high.
-
-Inflation was increased investigating the logs until 15.6 was the recommended parameter.
-
+### Haplotype Resolved Collapsed Graph Scaffolding 
 
 HiC Graph:
 
-![](https://github.com/ngroberts/Discradisca_antillarum/blob/master/HiC_scaffolding/images/p_ctg_hic.png)
+![]()
 
 Quast:
-> ```
-> Assembly	Discradisca_antillarum_collapsed_phased
-> # contigs (>= 0 bp)	9
-> # contigs (>= 1000 bp)	9
-> # contigs (>= 5000 bp)	9
-> # contigs (>= 10000 bp)	9
-> # contigs (>= 25000 bp)	9
-> # contigs (>= 50000 bp)	9
-> Total length (>= 0 bp)	297482005
-> Total length (>= 1000 bp)	297482005
-> Total length (>= 5000 bp)	297482005
-> Total length (>= 10000 bp)	297482005
-> Total length (>= 25000 bp)	297482005
-> Total length (>= 50000 bp)	297482005
-> # contigs	9
-> Largest contig	57892280
-> Total length	297482005
-> GC (%)	35.43
-> N50	33940083
-> N75	26378192
-> L50	4
-> L75	6
-> # N's per 100 kbp	0.00
-> ```
 
 
 Busco:
-> ```
-> ***** Results: *****
-> 
-> C:95.6%[S:95.2%,D:0.4%],F:1.0%,M:3.4%,n:954	   
-> 912	Complete BUSCOs (C)			   
-> 908	Complete and single-copy BUSCOs (S)	   
-> 4	Complete and duplicated BUSCOs (D)	   
-> 10	Fragmented BUSCOs (F)			   
-> 32	Missing BUSCOs (M)			   
-> 954	Total BUSCO groups searched
-> ```
