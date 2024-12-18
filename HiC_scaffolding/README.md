@@ -63,6 +63,10 @@ See: [HapHiC Issue #47](https://github.com/zengxiaofei/HapHiC/issues/47)
 
 In order to produce the best possible assembly, I scaffolded 4 seperate assemblies: 
 
+1. I attempted to scaffold the haplotype combined assembly. (concatinated hap1 and hap2). This will give the diploid assembly.
+
+[Scaffolding allhaps](#haplotype-resolved-assembly)
+
 1. I attempted to scaffold each haplotype separetely, this is done by aligning HiC reads to each haplotype and scaffolding.
 
 [Scaffolding Haplotypes Seperately](#haplotype-graph-scaffolding)
@@ -71,7 +75,8 @@ In order to produce the best possible assembly, I scaffolded 4 seperate assembli
 
 [Scaffolding phased graph](#haplotype-resolved-collapsed-graph-scaffolding)
 
-3. I attempted to scaffold the haplotype combined assembly. (concatinated hap1 and hap2). This will give the diploid assembly. 
+
+## Setup
 
 ### Use quickview in HapHiC to estimate diploid chromosome number manually:
 We need to do this because we do not know the number of chromosomes. Also notice how we specify the chemistry of restriction sites. We used Arima 4.5
