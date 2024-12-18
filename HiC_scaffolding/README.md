@@ -55,9 +55,9 @@ Here we are going to align all our reads to both haplotypes: Discradisca_HiC.asm
 
 #### **Issue:**
 
-For this genome when filtered, the bamfile is only 63M compared to the unfiltered 224M and 590M allhaps.fasta. This is not enough coverage of HiC for proper scaffolding according to HapHic.
+For this genome when filtered, the bamfile is 71Gb which is a Hi-C depth of around 120x. This is a great depth for scaffolding. 
 
-This results in Hi-C depth of only 0.1x. This is not enough for scaffolding.
+If the depth is poor (lower than 5x) scaffolding will be rather difficult.
 
 See: [HapHiC Issue #47](https://github.com/zengxiaofei/HapHiC/issues/47)
 
@@ -67,15 +67,11 @@ In order to produce the best possible assembly, I scaffolded 4 seperate assembli
 
 [Scaffolding Haplotypes Seperately](#haplotype-graph-scaffolding)
 
-2. I attempted to just scaffold the haplotype collapsed unitg graph from Hifiasm. *.p_utg.fasta. This is done by aligning HiC reads to this and proceeding.
-
-[Scaffolding untig Graph](#untig-graph-scaffolding)
-
-The following steps proceed without solving this issue, but the steps are the same to produce the results. Please see the sections mentioned above to see these results.
-
-3. I attempted to just scaddfold the haplotype collapsed phased assembly, unlike the utg (untig graph) haplotype information is not retained, this should be the best one, but due to low coverage and contact info it may not end up being perfect.
+2. I attempted to just scaffold the haplotype collapsed phased assembly, unlike the utg (untig graph) haplotype information is not retained, this should be the best one, but due to low coverage and contact info it may not end up being perfect.
 
 [Scaffolding phased graph](#haplotype-resolved-collapsed-graph-scaffolding)
+
+3. I attempted to scaffold the haplotype combined assembly. (concatinated hap1 and hap2). This will give the diploid assembly. 
 
 ### Use quickview in HapHiC to estimate diploid chromosome number manually:
 We need to do this because we do not know the number of chromosomes. Also notice how we specify the chemistry of restriction sites. We used Arima 4.5
