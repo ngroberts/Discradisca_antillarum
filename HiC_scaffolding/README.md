@@ -149,14 +149,46 @@ Then we need to remove the debris using seqkit. I have not done this as NCBI wan
 
 ### Haplotype Resolved Assembly 
 
-[N=9, 2N=18]
+[N=8, 2N=16]
 
-![]()
+![](https://github.com/ngroberts/Discradisca_antillarum/blob/master/HiC_scaffolding/images/ctg.png)
 
 BUSCO:
 
+        ***** Results: *****
+
+        C:95.2%[S:94.8%,D:0.4%],F:1.0%,M:3.8%,n:954
+        908     Complete BUSCOs (C)
+        904     Complete and single-copy BUSCOs (S)
+        4	Complete and duplicated BUSCOs (D)
+        10	Fragmented BUSCOs (F)
+        36	Missing BUSCOs (M)
+        954     Total BUSCO groups searched
+
 Quast:
 
+Assembly                    out_JBAT.FINAL
+# contigs (>= 0 bp)         208           
+# contigs (>= 1000 bp)      208           
+# contigs (>= 5000 bp)      208           
+# contigs (>= 10000 bp)     206           
+# contigs (>= 25000 bp)     190           
+# contigs (>= 50000 bp)     72            
+Total length (>= 0 bp)      308701191
+Total length (>= 1000 bp)   308701191
+Total length (>= 5000 bp)   308701191
+Total length (>= 10000 bp)  308690191
+Total length (>= 25000 bp)  308343930
+Total length (>= 50000 bp)  303915753
+# contigs                   208           
+Largest contig              59427719
+Total length                308701191
+GC (%)                      36.00
+N50                         48854149
+N75                         26316845
+L50                         3
+L75                         6
+# N's per 100 kbp           0.39
 
 ### Haplotype Graph Scaffolding
 
