@@ -106,11 +106,9 @@ The files we need for juicebox are:
 > out_JBAT.hic
 > out_JBAT.assembly 
 
-Do manual curation in juicer:
+Do manual curation in juicer. This just means assigning your own pseuodmolecules manually based on contact information. In a genome that is already well assembled with high HiC depth this should not be an issue.
 
-![]()
-
-We now have some idea of the diploid chromsosome number being 18.
+We now have some idea of the diploid chromsosome number being 16.
 
 ### Run HapHic with our diploid chromsosome number:
 
@@ -119,16 +117,16 @@ We can now remove the quickview flag and make sure to specify the gfas for each 
 ```bash
 FILTEREDBAM=HiC.filtered.bam
 ASSEMBLY=/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/Discradisca_HiC.asm.hic.all_haps.p_ctg.fasta
-nchrs=18
+nchrs=16
 
 /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/programs/HapHiC/haphic pipeline $ASSEMBLY $FILTEREDBAM $nchrs --threads 16 --gfa "/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/scaffolding_all_haps/Discradisca_HiC.asm.hic.hap1.p_ctg.gfa,/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/scaffolding_all_haps/Discradisca_HiC.asm.hic.hap2.p_ctg.gfa" --max_inflation 3 --correct_nrounds 2 --RE "GATC,GANTC,CTNAG,TTAA"
 ```
 
 Using the same steps above (running juicer.sh) we can take a look at the HiC map and do some manual scaffolding in Juicebox.
 
-Here is the final HiC map: N= 9, 2N = 18.
+Here is the final HiC map: N=8, 2N = 16.
 
-![](https://github.com/ngroberts/Discradisca_HiC/blob/master/images/HIC_Discradisca_diploid.png)
+![]()
 
 Lastly we can use juicer post after saving this assembly in juicebox to produce the final fasta, and remove the debris generated in juicebox.
 
@@ -142,7 +140,7 @@ This will produce:
 
 >out_JBAT.FINAL.fa
 
-Then we need to remove the debris using seqkit.
+Then we need to remove the debris using seqkit. I have not done this as NCBI wants debris in the upload. For annotation I will leave debris in.
 
 ```bash
 /grps2/kmk/Nick/2024-02-27_MDA_Seqkit_Samtools/scripts/seqkit head -n 18 out_JBAT.FINAL.fa > Discradisca_antillarum_diploid.fa
