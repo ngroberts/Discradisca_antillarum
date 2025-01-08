@@ -122,11 +122,7 @@ nchrs=16
 /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/programs/HapHiC/haphic pipeline $ASSEMBLY $FILTEREDBAM $nchrs --threads 16 --gfa "/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/scaffolding_all_haps/Discradisca_HiC.asm.hic.hap1.p_ctg.gfa,/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/scaffolding_all_haps/Discradisca_HiC.asm.hic.hap2.p_ctg.gfa" --max_inflation 3 --correct_nrounds 2 --RE "GATC,GANTC,CTNAG,TTAA"
 ```
 
-Using the same steps above (running juicer.sh) we can take a look at the HiC map and do some manual scaffolding in Juicebox.
-
-Here is the final HiC map: N=8, 2N = 16.
-
-![]()
+Using the same steps above (running juicer.sh) we can take a look at the HiC map and do some manual scaffolding in Juicebox. Do this for each hic graph and assembly to get the results below.
 
 Lastly we can use juicer post after saving this assembly in juicebox to produce the final fasta, and remove the debris generated in juicebox.
 
@@ -146,8 +142,8 @@ Then we need to remove the debris using seqkit. I have not done this as NCBI wan
 /grps2/kmk/Nick/2024-02-27_MDA_Seqkit_Samtools/scripts/seqkit head -n 18 out_JBAT.FINAL.fa > Discradisca_antillarum_diploid.fa
 ```
 ## Results
-
-### Haplotype Resolved Assembly 
+ 
+### Haplotype Resolved Collapsed Graph Scaffolding 
 
 [N=8, 2N=16]
 
@@ -291,7 +287,7 @@ Busco:
 >	954	Total BUSCO groups searched
 ```
 
-### Haplotype Resolved Collapsed Graph Scaffolding 
+### Haplotype Resolved Assembly
 
 HiC Graph:
 
