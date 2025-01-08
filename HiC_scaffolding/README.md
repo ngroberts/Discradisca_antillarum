@@ -156,7 +156,6 @@ Then we need to remove the debris using seqkit. I have not done this as NCBI wan
 BUSCO:
 
 ```
->
 >	***** Results: *****
 >
 >	C:95.2%[S:94.8%,D:0.4%],F:1.0%,M:3.8%,n:954	   
@@ -166,13 +165,11 @@ BUSCO:
 >	10	Fragmented BUSCOs (F)			   
 >	36	Missing BUSCOs (M)			   
 >	954	Total BUSCO groups searched
->
 ```
 
 Quast
 
 ```
->
 > Assembly                    out_JBAT.FINAL
 > # contigs (>= 0 bp)         208           
 > # contigs (>= 1000 bp)      208           
@@ -195,7 +192,6 @@ Quast
 > L50                         3             
 > L75                         6             
 > # N's per 100 kbp           0.39  
->
 ```
 
 ### Haplotype Graph Scaffolding
@@ -204,25 +200,96 @@ Quast
 
 HiC Graph:
 
-![]()
+![](https://github.com/ngroberts/Discradisca_antillarum/blob/master/HiC_scaffolding/images/hap1.png)
 
 Metrics:
 
 Quast: 
 
+```
+> Assembly                    out_JBAT.FINAL
+> # contigs (>= 0 bp)         196           
+> # contigs (>= 1000 bp)      196           
+> # contigs (>= 5000 bp)      196           
+> # contigs (>= 10000 bp)     196           
+> # contigs (>= 25000 bp)     180           
+> # contigs (>= 50000 bp)     53            
+> Total length (>= 0 bp)      305238177     
+> Total length (>= 1000 bp)   305238177     
+> Total length (>= 5000 bp)   305238177     
+> Total length (>= 10000 bp)  305238177     
+> Total length (>= 25000 bp)  304896358     
+> Total length (>= 50000 bp)  300289961     
+> # contigs                   196           
+> Largest contig              60427462      
+> Total length                305238177     
+> GC (%)                      35.90         
+> N50                         48440619      
+> N75                         26101642      
+> L50                         3             
+> L75                         5             
+> # N's per 100 kbp           1.18
+```
+
 Busco:
 
+```
+>	***** Results: *****
+>
+>	C:95.1%[S:94.9%,D:0.2%],F:1.2%,M:3.7%,n:954	   
+>	907	Complete BUSCOs (C)			   
+>	905	Complete and single-copy BUSCOs (S)	   
+>	2	Complete and duplicated BUSCOs (D)	   
+>	11	Fragmented BUSCOs (F)			   
+>	36	Missing BUSCOs (M)			   
+>	954	Total BUSCO groups searched
+```
 
 #### Haplotype 2
 
-![]()
+![](https://github.com/ngroberts/Discradisca_antillarum/blob/master/HiC_scaffolding/images/hap2.png)
 
 Metrics:
 
 Quast: 
 
+```
+> Assembly                    out_JBAT.FINAL
+> # contigs (>= 0 bp)         98            
+> # contigs (>= 1000 bp)      98            
+> # contigs (>= 5000 bp)      98            
+> # contigs (>= 10000 bp)     98            
+> # contigs (>= 25000 bp)     89            
+> # contigs (>= 50000 bp)     46            
+> Total length (>= 0 bp)      303338868     
+> Total length (>= 1000 bp)   303338868     
+> Total length (>= 5000 bp)   303338868     
+> Total length (>= 10000 bp)  303338868     
+> Total length (>= 25000 bp)  303136924     
+> Total length (>= 50000 bp)  301546227     
+> # contigs                   98            
+> Largest contig              58825145      
+> Total length                303338868     
+> GC (%)                      35.74         
+> N50                         48971102      
+> N75                         26474007      
+> L50                         3             
+> L75                         5             
+> # N's per 100 kbp           0.66
+```
 Busco:
 
+```
+>	***** Results: *****
+>
+>	C:95.6%[S:95.2%,D:0.4%],F:0.9%,M:3.5%,n:954	   
+>	912	Complete BUSCOs (C)			   
+>	908	Complete and single-copy BUSCOs (S)	   
+>	4	Complete and duplicated BUSCOs (D)	   
+>	9	Fragmented BUSCOs (F)			   
+>	33	Missing BUSCOs (M)			   
+>	954	Total BUSCO groups searched
+```
 
 ### Haplotype Resolved Collapsed Graph Scaffolding 
 
