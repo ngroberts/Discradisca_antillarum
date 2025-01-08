@@ -155,6 +155,7 @@ Then we need to remove the debris using seqkit. I have not done this as NCBI wan
 
 BUSCO:
 
+```
 >
 >	***** Results: *****
 >
@@ -166,9 +167,11 @@ BUSCO:
 >	36	Missing BUSCOs (M)			   
 >	954	Total BUSCO groups searched
 >
+```
 
 Quast
 
+```
 >
 > Assembly                    out_JBAT.FINAL
 > # contigs (>= 0 bp)         208           
@@ -193,6 +196,7 @@ Quast
 > L75                         6             
 > # N's per 100 kbp           0.39  
 >
+```
 
 ### Haplotype Graph Scaffolding
 
