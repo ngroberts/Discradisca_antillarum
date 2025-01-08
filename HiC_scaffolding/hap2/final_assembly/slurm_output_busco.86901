@@ -1,0 +1,112 @@
+Loading bio/busco
+  Loading requirement: mpi/openmpi/gcc/1.10.2 compilers/gcc/4.8.4 bio/allpathslg
+    perl/5.22.1threaded bio/bioinfo-gcc gsl/1.15 bio/samtools/1.10 boost/1.66.0
+    bio/augustus/3.3.2 bio/blast/2.9.0 physical/GDAL2/2.4.0
+    python/python3/3.6.5shared java/1.8.0 bio/upp
+INFO:	***** Start a BUSCO v4.0.2 analysis, current time: 01/08/2025 12:42:09 *****
+INFO:	Configuring BUSCO with /kmk/scripts/busco/config.ini
+INFO:	Mode is genome
+INFO:	Input file is out_JBAT.FINAL.fa
+INFO:	Using local lineages directory /kmk/databases/metazoa_odb10
+INFO:	Running BUSCO using lineage dataset metazoa_odb10 (eukaryota, 2019-11-20)
+INFO:	Creating BLAST database with input file
+INFO:	Running 1 job(s) on makeblastdb
+INFO:	[makeblastdb]	1 of 1 task(s) completed
+INFO:	Running a BLAST search for BUSCOs against created database
+INFO:	Running 1 job(s) on tblastn
+INFO:	[tblastn]	1 of 1 task(s) completed
+INFO:	Running Augustus gene predictor on BLAST search results.
+INFO:	Running Augustus prediction using fly as species:
+INFO:	Running 982 job(s) on augustus
+INFO:	[augustus]	99 of 982 task(s) completed
+INFO:	[augustus]	197 of 982 task(s) completed
+INFO:	[augustus]	295 of 982 task(s) completed
+INFO:	[augustus]	393 of 982 task(s) completed
+INFO:	[augustus]	492 of 982 task(s) completed
+INFO:	[augustus]	590 of 982 task(s) completed
+INFO:	[augustus]	688 of 982 task(s) completed
+INFO:	[augustus]	786 of 982 task(s) completed
+INFO:	[augustus]	884 of 982 task(s) completed
+INFO:	[augustus]	982 of 982 task(s) completed
+INFO:	Extracting predicted proteins...
+INFO:	***** Run HMMER on gene sequences *****
+INFO:	Running 923 job(s) on hmmsearch
+INFO:	[hmmsearch]	93 of 923 task(s) completed
+INFO:	[hmmsearch]	185 of 923 task(s) completed
+INFO:	[hmmsearch]	277 of 923 task(s) completed
+INFO:	[hmmsearch]	370 of 923 task(s) completed
+INFO:	[hmmsearch]	462 of 923 task(s) completed
+INFO:	[hmmsearch]	554 of 923 task(s) completed
+INFO:	[hmmsearch]	647 of 923 task(s) completed
+INFO:	[hmmsearch]	739 of 923 task(s) completed
+INFO:	[hmmsearch]	831 of 923 task(s) completed
+INFO:	[hmmsearch]	923 of 923 task(s) completed
+INFO:	Running a BLAST search for BUSCOs against created database
+INFO:	Extracting missing and fragmented buscos from the file ancestral_variants...
+INFO:	[tblastn]	1 of 1 task(s) completed
+INFO:	Training Augustus using Single-Copy Complete BUSCOs:
+INFO:	Converting predicted genes to short genbank files
+INFO:	Running 818 job(s) on gff2gbSmallDNA.pl
+INFO:	[gff2gbSmallDNA.pl]	82 of 818 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	164 of 818 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	246 of 818 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	328 of 818 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	409 of 818 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	491 of 818 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	573 of 818 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	655 of 818 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	737 of 818 task(s) completed
+INFO:	[gff2gbSmallDNA.pl]	818 of 818 task(s) completed
+INFO:	All files converted to short genbank files, now running the training scripts
+INFO:	Running 1 job(s) on new_species.pl
+INFO:	[new_species.pl]	1 of 1 task(s) completed
+INFO:	Running 1 job(s) on etraining
+INFO:	[etraining]	1 of 1 task(s) completed
+WARNING:	Optimizing augustus metaparameters, this may take a very long time, started at 01/08/2025 13:03:04
+INFO:	Running 1 job(s) on optimize_augustus.pl
+INFO:	[optimize_augustus.pl]	1 of 1 task(s) completed
+INFO:	[etraining]	1 of 2 task(s) completed
+INFO:	[etraining]	2 of 2 task(s) completed
+INFO:	Re-running Augustus with the new metaparameters, number of target BUSCOs: 132
+INFO:	Running Augustus gene predictor on BLAST search results.
+INFO:	Running Augustus prediction using BUSCO_BUSCO_metazoa.fasta as species:
+INFO:	[augustus]	14 of 133 task(s) completed
+INFO:	[augustus]	27 of 133 task(s) completed
+INFO:	[augustus]	40 of 133 task(s) completed
+INFO:	[augustus]	54 of 133 task(s) completed
+INFO:	[augustus]	67 of 133 task(s) completed
+INFO:	[augustus]	80 of 133 task(s) completed
+INFO:	[augustus]	94 of 133 task(s) completed
+INFO:	[augustus]	107 of 133 task(s) completed
+INFO:	[augustus]	120 of 133 task(s) completed
+INFO:	[augustus]	133 of 133 task(s) completed
+INFO:	Extracting predicted proteins...
+INFO:	***** Run HMMER on gene sequences *****
+INFO:	[hmmsearch]	14 of 136 task(s) completed
+INFO:	[hmmsearch]	28 of 136 task(s) completed
+INFO:	[hmmsearch]	55 of 136 task(s) completed
+INFO:	[hmmsearch]	96 of 136 task(s) completed
+INFO:	[hmmsearch]	123 of 136 task(s) completed
+INFO:	[hmmsearch]	136 of 136 task(s) completed
+INFO:	Results:	C:95.6%[S:95.2%,D:0.4%],F:0.9%,M:3.5%,n:954	   
+
+INFO:	
+
+	--------------------------------------------------
+	|Results from dataset metazoa_odb10               |
+	--------------------------------------------------
+	|C:95.6%[S:95.2%,D:0.4%],F:0.9%,M:3.5%,n:954      |
+	|912	Complete BUSCOs (C)                       |
+	|908	Complete and single-copy BUSCOs (S)       |
+	|4	Complete and duplicated BUSCOs (D)        |
+	|9	Fragmented BUSCOs (F)                     |
+	|33	Missing BUSCOs (M)                        |
+	|954	Total BUSCO groups searched               |
+	--------------------------------------------------
+INFO:	BUSCO analysis done with WARNING(s). Total running time: 1350 seconds
+***** Summary of warnings: *****
+
+WARNING:busco.GenomeAnalysis	Optimizing augustus metaparameters, this may take a very long time, started at 01/08/2025 13:03:04
+
+INFO:	Results written in busco_out/BUSCO_metazoa.fasta
+

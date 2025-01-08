@@ -1,0 +1,53 @@
+Loading bio/quast/5.0
+  Loading requirement: python/python3/3.3shared
+/share/apps/quast/quast-5.0.0/quast.py -e -m 0 -t 16 --space-efficient out_JBAT.FINAL.fa
+
+Version: 5.0.0, de6973bb
+
+System information:
+  OS: Linux-4.18.0-372.9.1.el8.x86_64-x86_64-with-centos-8.6-Green_Obsidian (linux_64)
+  Python version: 3.3.2
+  CPUs number: 40
+
+Started: 2025-01-08 12:41:06
+
+Logging to /grps2/kmk/Nick/2024_12_02_The_HiC_Incident/Discradisca_antillarum/HiC_scaffolding/scaffolding_conitgs_collapsed/final_assembly/quast_results/results_2025_01_08_12_41_06/quast.log
+
+CWD: /grps2/kmk/Nick/2024_12_02_The_HiC_Incident/Discradisca_antillarum/HiC_scaffolding/scaffolding_conitgs_collapsed/final_assembly
+Main parameters: 
+  MODE: default, threads: 16, eukaryotic: true, minimum alignment length: 65, ambiguity: one, \
+  threshold for extensive misassembly size: 1000
+
+WARNING: Can't draw plots: python-matplotlib is missing or corrupted.
+
+Contigs:
+  Pre-processing...
+  out_JBAT.FINAL.fa ==> out_JBAT.FINAL
+
+2025-01-08 12:41:25
+Running Basic statistics processor...
+  Contig files: 
+    out_JBAT.FINAL
+  Calculating N50 and L50...
+    out_JBAT.FINAL, N50 = 48854149, L50 = 3, Total length = 308701191, GC % = 36.00, # N's per 100 kbp =  0.39
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2025-01-08 12:41:40
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+Done
+
+2025-01-08 12:41:40
+RESULTS:
+  Text versions of total report are saved to /grps2/kmk/Nick/2024_12_02_The_HiC_Incident/Discradisca_antillarum/HiC_scaffolding/scaffolding_conitgs_collapsed/final_assembly/quast_results/results_2025_01_08_12_41_06/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /grps2/kmk/Nick/2024_12_02_The_HiC_Incident/Discradisca_antillarum/HiC_scaffolding/scaffolding_conitgs_collapsed/final_assembly/quast_results/results_2025_01_08_12_41_06/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /grps2/kmk/Nick/2024_12_02_The_HiC_Incident/Discradisca_antillarum/HiC_scaffolding/scaffolding_conitgs_collapsed/final_assembly/quast_results/results_2025_01_08_12_41_06/report.html
+  Log is saved to /grps2/kmk/Nick/2024_12_02_The_HiC_Incident/Discradisca_antillarum/HiC_scaffolding/scaffolding_conitgs_collapsed/final_assembly/quast_results/results_2025_01_08_12_41_06/quast.log
+
+Finished: 2025-01-08 12:41:40
+Elapsed time: 0:00:34.268200
+NOTICEs: 1; WARNINGs: 1; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

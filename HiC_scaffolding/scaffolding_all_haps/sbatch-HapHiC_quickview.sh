@@ -10,8 +10,8 @@
 #SBATCH -c 16 #number of cores per task
 #SBATCH -o slurm_output_hapHic_quickview.%J
 #SBATCH -e slurm_error_hapHic_quickview.%J
-#SBATCH -p highmem
-#SBATCH --qos highmem
+#SBATCH -p threaded
+#SBATCH --qos threaded
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=
 
@@ -20,11 +20,11 @@ module load miniconda3/base/py38_4.13.0
 conda activate /bighome/ngroberts/.conda/envs/haphic
 
 FILTEREDBAM=HiC.filtered.bam
-ASSEMBLY=/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/Discradisca_HiC.asm.hic.all_haps.p_ctg.fasta
-nchrs=0
+ASSEMBLY=/grps2/kmk/Nick/2024_12_02_The_HiC_Incident/Discradisca_antillarum/HiC_scaffolding/scaffolding_all_haps/Discradisca_HiC.asm.hic.all_haps.p_ctg.fasta
+nchrs=16
 
 ### Partition contigs into different haplotypes in quick view mode
 
-/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/programs/HapHiC/haphic pipeline $ASSEMBLY $FILTEREDBAM $nchrs --quick_view --gfa "/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/scaffolding_all_haps/Discradisca_HiC.asm.hic.hap1.p_ctg.gfa,/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/scaffolding_all_haps/Discradisca_HiC.asm.hic.hap2.p_ctg.gfa" --correct_nrounds 2 --RE "GATC,GANTC,CTNAG,TTAA"
+/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/programs/HapHiC/haphic pipeline $ASSEMBLY $FILTEREDBAM $nchrs --threads 16 --gfa "hifiasm.asm.hic.hap1.p_ctg.gfa,hifiasm.asm.hic.hap2.p_ctg.gfa" --correct_nrounds 2 --RE "GATC,GANTC,CTNAG,TTAA"
 
 conda deactivate

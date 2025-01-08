@@ -19,9 +19,9 @@ module load miniconda3/base/py38_4.13.0
 conda activate /bighome/ngroberts/.conda/envs/haphic
 
 FILTEREDBAM=HiC.filtered.bam
-ASSEMBLY=hifiasm.asm.hic.p_ctg.fasta
+ASSEMBLY=hifiasm.asm.hic.hap2.p_ctg.fasta
 nchrs=8
 
-/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/programs/HapHiC/haphic pipeline $ASSEMBLY $FILTEREDBAM $nchrs --threads 16 --max_inflation 4 --gfa "hifiasm.asm.hic.p_ctg.gfa" --correct_nrounds 2 --RE "GATC,GANTC,CTNAG,TTAA"
+/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/programs/HapHiC/haphic pipeline $ASSEMBLY $FILTEREDBAM $nchrs --threads 16 --max_inflation 4 --gfa "hifiasm.asm.hic.hap2.p_ctg.gfa" --correct_nrounds 2 --RE "GATC,GANTC,CTNAG,TTAA"
 
 conda deactivate

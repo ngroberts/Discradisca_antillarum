@@ -71,7 +71,7 @@ In order to produce the best possible assembly, I scaffolded 4 seperate assembli
 
 [Scaffolding Haplotypes Seperately](#haplotype-graph-scaffolding)
 
-2. I attempted to just scaffold the haplotype collapsed phased assembly, unlike the utg (untig graph) haplotype information is not retained, this should be the best one, but due to low coverage and contact info it may not end up being perfect.
+2. I attempted to just scaffold the haplotype collapsed phased assembly, unlike the utg (untig graph) haplotype information is not retained, this should be the best one.
 
 [Scaffolding phased graph](#haplotype-resolved-collapsed-graph-scaffolding)
 

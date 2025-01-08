@@ -1,0 +1,22 @@
+Assembly                    out_JBAT.FINAL
+# contigs (>= 0 bp)         208           
+# contigs (>= 1000 bp)      208           
+# contigs (>= 5000 bp)      208           
+# contigs (>= 10000 bp)     206           
+# contigs (>= 25000 bp)     190           
+# contigs (>= 50000 bp)     72            
+Total length (>= 0 bp)      308701191     
+Total length (>= 1000 bp)   308701191     
+Total length (>= 5000 bp)   308701191     
+Total length (>= 10000 bp)  308690191     
+Total length (>= 25000 bp)  308343930     
+Total length (>= 50000 bp)  303915753     
+# contigs                   208           
+Largest contig              59427719      
+Total length                308701191     
+GC (%)                      36.00         
+N50                         48854149      
+N75                         26316845      
+L50                         3             
+L75                         6             
+# N's per 100 kbp           0.39          

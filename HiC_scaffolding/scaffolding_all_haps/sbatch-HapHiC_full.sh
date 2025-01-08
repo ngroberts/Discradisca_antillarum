@@ -10,8 +10,8 @@
 #SBATCH -c 16 #number of cores per task
 #SBATCH -o slurm_output.%J
 #SBATCH -e slurm_error.%J
-#SBATCH -p highmem
-#SBATCH --qos highmem
+#SBATCH -p threaded
+#SBATCH --qos threaded
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=
 
@@ -19,8 +19,8 @@ module load miniconda3/base/py38_4.13.0
 conda activate /bighome/ngroberts/.conda/envs/haphic
 
 FILTEREDBAM=HiC.filtered.bam
-ASSEMBLY=/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/Discradisca_HiC.asm.hic.all_haps.p_ctg.fasta
-nchrs=18
+ASSEMBLY=
+nchrs=16
 
 /grps2/kmk/Nick/2024-07-02-HiC_Discradisca/programs/HapHiC/haphic pipeline $ASSEMBLY $FILTEREDBAM $nchrs --threads 16 --gfa "/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/scaffolding_all_haps/Discradisca_HiC.asm.hic.hap1.p_ctg.gfa,/grps2/kmk/Nick/2024-07-02-HiC_Discradisca/Discradisca/scaffolding_all_haps/Discradisca_HiC.asm.hic.hap2.p_ctg.gfa" --max_inflation 3 --correct_nrounds 2 --RE "GATC,GANTC,CTNAG,TTAA"
 

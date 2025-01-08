@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#SBATCH --job-name busco
-#SBATCH --mem=500G
+#SBATCH --job-name=
 #SBATCH -n 1 #tasks
 #SBATCH -N 1 #nodes
-#SBATCH -c 16 #number of cores per task
-#SBATCH -o slurm_output_busco.%J
-#SBATCH -e slurm_error_busco.%J
+#SBATCH -c 16 #cores here
+#SBATCH --mem=600G
+#SBATCH -o slurm_output-.%J
+#SBATCH -e slurm_error-.%J
 #SBATCH -p threaded
 #SBATCH --qos threaded
 #SBATCH --mail-type=ALL
@@ -23,4 +23,5 @@ export AUGUSTUS_CONFIG_PATH="/kmk/scripts/augustus-3.3.2/config"
 
 #You may want to change "metazoa" to "mollusca" or vice versa for the different databses we are likely to use
 #This script uses the new "--long" feature that is more sensitive
+
 busco -c 16 -m genome --long --offline -l /kmk/databases/metazoa_odb10 -i out_JBAT.FINAL.fa  -o BUSCO_metazoa.fasta
