@@ -17,6 +17,14 @@
 *.aa
 *.codingseq
 *.gff
+*.hist
+*.meryl/
+*.meryl
+*_pre
+*_suf
+*.qv
+*.wig
+slurm*
 
 run_metazoa_odb10/
 blast_db/
@@ -31,3 +39,5 @@ busco_downloads/
 GeneMark-ETP/
 errors/
 Augustus/
+meryl_kmer_intersect/
+
